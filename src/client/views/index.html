@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title >Travel App</title>
+<link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+</head>
+<script>
+  // Check that service workers are supported
+  if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js');
+      });
+  }
+</script>
+<body>
+
+  <div id = "app">
+    <div class ="headline">
+      Travel Planner
+    </div>
+
+    <div class = "outer-box">
+      <div class ="destination">
+        <label for="destination">Destination</label>
+        <input class = "input" type="text" id="destination" placeholder="Enter your destination">
+      </div>
+
+      <div class ="date">
+        <label for="date">Date of Departure</label>
+        <input class = "input" type="text" id="date" placeholder="Enter your date of departure mm/dd/yyyy">
+      </div>
+      
+      <br>
+
+      <div class = "button">
+        <button id="generate" type = "submit" name="" value="Submit"> Generate </button>
+      </div>
+    </div>
+
+    <div class ="result" id="result">
+      <div id = "weather"></div> 
+    </div>
+  </div>
+
+</body>
+</html>
