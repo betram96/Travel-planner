@@ -13,7 +13,6 @@ body{
     grid-gap: 1em;
     font-size: 50px;
     background: url('../media/travel-world.jpg') no-repeat center center fixed;
-    background-size: contain;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -33,6 +32,7 @@ body{
 #result{
   font-size: 30px;
   columns: 200px 2;
+  display: inline;
 }
 
 #weather {
@@ -105,4 +105,32 @@ button:focus {
     color: #f0d43a; 
     font-family: 'Oswald', sans-serif;
 
+}
+
+@media only screen and (max-width: 1024px){
+    #app{
+        display: grid;
+        grid-template-rows: 0.5fr 2fr 2fr;
+        background: url('../media/travel-world.jpg') no-repeat center center fixed;
+        text-align: center;
+        overflow-y: scroll;
+        background-size: 100% 100%;
+    }
+    
+    .headline {
+        font-size: 40px;
+    }
+
+    #result{
+        display: inline;
+        columns: auto;
+        font-size: 20px;
+    }
+
+    img {
+        border-radius: 8px;
+        width: 80%;
+        height: auto;
+        border: none;
+    }
 }

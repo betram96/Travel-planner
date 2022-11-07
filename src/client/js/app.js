@@ -5,10 +5,12 @@ const date = document.getElementById('date');
 const resultBox = document.getElementById('result');
 
 
-// This function is called when the Submit button is clicked
-// First, it grabs the value in the input field (URL)
-// Then send this URL to the server
-// The server uses this URL to send the GET request to MeaningCloud then send the info received back to client
+// This function is called when the Generate button is clicked
+// First, it grabs the value in the input field (detination and date)
+// Then send this info to the server
+// The server uses the destination to send the GET request to GeoNames
+// GeoNames return lat and long. Sending this to WeatherBit to get weather forecast
+// Use the destination to send GET request to PixaBay to get image of the destination
 // Lastly, client presents this info in UI
 function submitText (event) {
     event.preventDefault();
